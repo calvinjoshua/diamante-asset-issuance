@@ -1,0 +1,24 @@
+Simple App to Demonstrate Creating Custom Assets Using the Diamante Wallet Browser Extension
+
+If your activites has to be done with user wallet using directly instead of extension,
+
+it can be done  like below, 
+
+transaction.sign(accountObject);
+const result = await server.submitTransaction(transaction);
+if (result.successful === true) {
+  res.send({
+    error: null,
+    data: "Succefull",
+  });
+}
+
+in the place of 
+
+window.diam
+.sign(
+  createAccountTx.toEnvelope().toXDR('base64'),
+  true,
+  "Diamante Testnet"
+)
+
